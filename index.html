@@ -4,7 +4,49 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-<!-- loader for website -->
+<!-- window pop modal for website -->
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
 <!-- loader for website end -->
 <!-- scroll to clicks -->
 <style>
@@ -502,13 +544,28 @@ html {
             <article><a href="#"><i><img src="icons/arcjieve.png"></img></i></a>
               <h6 class="heading">Archieve</h6>
               <p>check Archieve data from here. [&hellip;]</p>
-              <footer><a href="#">View &raquo;</a></footer>
+              <footer><a id="myBtnmodal">View &raquo;</a></footer>
             </article>
           </li>
         </ul>
       </div>
     </div>
     <!-- ## ##############-->
+	<!-- The Modal windows pop up  -->
+<div id="myModal" class="modal">
+
+  <!-- Modal windows pop up content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+<ul>
+<li><a href="https://erc.mp.gov.in/SMS/home">SMS - Admin</a></li>
+<li><a href="https://erc.mp.gov.in/SMSOpen/home">SMS - User</a></li>
+<li><a href="http://erc.mp.gov.in/SMSOpen/emission">Access to live emission data(previous) </a>
+</li>
+<li><a href="https://erc.mp.gov.in/ESC/LiveMonitoringLink.aspx">Access to live emission data(old) </a>
+</ul>
+  </div>
+</div>
     <!-- / main body -->
     <div class="clear"></div>
   </main>
@@ -1188,7 +1245,34 @@ function closeForm3() {
   document.getElementById("myForm3").style.display = "none";
 }
 </script>
-<!-- Letters end-->
+<!-- window pop up modal end-->
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtnmodal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 <!-- Letters -->
 <!-- Letters end--><!-- Letters-->
 <!-- LETTERS -->
