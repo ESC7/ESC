@@ -18,6 +18,7 @@ html {
 }
 
 #contact_div1
+#about_erc_div1
 #guidence_div1
 #status_div1
 #membership_div1
@@ -35,7 +36,37 @@ html {
 }
 </style>
 <!-- lock navigation bar -->
-<!-- animations -->
+<!-- load some of html div part -->
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+<!-- load some of html div part -->
 <!-- animations -->
 <!-- animations -->
 <!-- ## gradient in background##############-->
@@ -60,21 +91,7 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(175,255,197,1) 
     <nav id="mainav" class="fl_center">
       <ul class="clear">
 		<li><a href="#pcb_div1">MP.P.C.B</a></li>
-        <li><a class="drop" href="#">E.R.C</a>
-          <ul>
-		  <!-- ## delete about ERC##############-->
-            <li><a href="https://erc.mp.gov.in/preamble.aspx">About ERC</a></li>
-			<li><a href="https://erc.mp.gov.in/Background.aspx">Background</a></li>
-			<li><a href="https://erc.mp.gov.in/AimObjective.aspx">Aims &amp; objectives</a></li>
-			<li><a href="https://erc.mp.gov.in/Functions.aspx">Functions</a></li>
-			<li><a href="https://erc.mp.gov.in/PresentStatus.aspx">Present Status</a></li>
-			<li><a href="https://erc.mp.gov.in/PastSupport.aspx">Past Support</a></li>
-			<li><a href="https://erc.mp.gov.in/Documents/Chronology.pdf">Brief Chronology</a></li>
-			<li><a href="https://erc.mp.gov.in/Orders.aspx">Orders &amp; Notifications</a></li>
-			<li><a href="https://erc.mp.gov.in/Documents/ERC_2012.pdf">ERC Brochure</a></li>
-			<li><a href="https://erc.mp.gov.in/Documents/Chlorine1.pdf">Last Emergency Tackled</a></li>
-          </ul>
-        </li>
+        <li><a href="#about_erc_div1">E.R.C</a></li>
 		<li><a href="#membership_div1">Membership</a></li>
 		<li><a href="https://erc.mp.gov.in/ESC/Direction.aspx">Directions</a></li>
 		       <li><a href="#crisis_group_div1">Crisis Group</a></li>
@@ -403,7 +420,7 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(175,255,197,1) 
       <article class="one_third first">
         <h6 class="heading font-x2"><b>About</b>:</h6>
         <p><b>Environment Surveillance Centre :</b>Real-time continuous monitoring has a significant role in environmental management. Availability of data on real-time basis helps in quick analysis and instant follow up action for better control over impacts on the environment. The National Environment Policy 2006 envisaged to strengthen the testing infrastructure and network for monitoring ambient environmental quality and progressively ensure real-time and on-line availability of the monitoring data.</span></p>
-        <p class="btmspace-30"><b>Emergency Response Centre :</b>Bhopal is one of the four centres established in the country by the Ministry of Environment, Forests & Climate Change, GoI as a voluntary scheme. The prime aim of this is to deal with chemical emergencies by providing technical support to the target groups for prevention and mitigation of chemical accidents and tackle the crisis effectively if that occurs.</p>
+        <p class="btmspace-30">In order to keep a close vigil and continuous surveillance of industries, the M.P. Pollution Control Board (MPPCB) established Environment Surveillance Centre (ESC) at Bhopal. As part of follow up action of Directions issued, the industries have installed real-time monitoring systems for self monitoring of compliance and are transmitting real-time data of CAAQMS, CEMS, CSEMS and IP-PTZ Cameras to the ESC.</p>
         		</font><ul>
 <li><a href="https://esc.mp.gov.in/registration.html">Industries Registration for Central Server</a></li>
 <li><a href="https://erc.mp.gov.in/adminfiles/OpenAPI.pdf" target="_blank">API - Central server for Industries</a></li>
@@ -723,6 +740,92 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(175,255,197,1) 
 </div>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
+<!-- ######################################## ERC tabs ######################################################## -->
+		<!-- Scroll click -->
+	<div class="main" id="about_erc_div1">
+	<a href="about_erc_div1"></a></div>
+    <!-- ## ##############-->
+<div class="wrapper row3" style="box-shadow: 0 0 3px black;background-color:#282828;";>
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="group">
+      <article class="one_third first">
+        <font color="white"><h6 class="heading font-x2"><b>Emergency Response Centre</b></h6>
+        <p><font size="3">The Emergency Response Centre, Bhopal is one of the four centres established in the country by the Ministry of Environment, Forests & Climate Change, GoI as a voluntary scheme. The prime aim of this is to deal with chemical emergencies by providing technical support to the target groups for prevention and mitigation of chemical accidents and tackle the crisis effectively if that occurs. The target groups include Government departments, industry personnel, academic institutions, NGOs and also the common citizens. This centre organizes activities, including out-reach programmes in various industrial pockets, to bring awareness among the people about hazards associated with chemicals and their safety aspects for prevention and mitigation of possible chemical mishaps</p>
+        </font></font><footer><a class="btn" href="https://erc.mp.gov.in/preamble.aspx">Read More &raquo;</a></footer>
+      </article>
+      <div class="two_third">
+          <div class="group btmspace-50 demo">
+        <div class="one_half first"><div class="grow">
+		<a href="https://erc.mp.gov.in/Background.aspx"><article style="border-radius: 15px;box-shadow: 0 0 80px black;background-color:#55e967e0;";><i></i>
+              <center><h1 class="heading" style="font-size: 17px;"><b><img src="./icons/legislation/white.png" alt="Smiley face" height="50" width="50" style="background-color:white;"></img><font color="black" size="6;">  Background</b></font></h1></center>
+              <footer style="border-radius: 0px 0px 15px 15px;font-size: 16px; padding-left:10px;background-color:white;box-shadow: 0 0 1px black;font color="red";><b style="color:#474747";><font color=white>View</font></b></footer>
+            </article></div></a>
+		</div>
+        <div class="one_half"><div class="grow">
+		<a href="https://erc.mp.gov.in/AimObjective.aspx"><article style="border-radius: 15px;box-shadow: 0 0 80px black;background-color:#55e967e0;";><i></i>
+              <center><h1 class="heading" style="font-size: 17px;"><b><img src="./icons/legislation/white.png" alt="Smiley face" height="50" width="50" style="background-color:white;"></img><font color="black" size="6;">  Aims & objectives</b></font></h1></center>
+              <footer style="border-radius: 0px 0px 15px 15px;font-size: 16px; padding-left:10px;background-color:white;box-shadow: 0 0 1px black;font color="red";><b style="color:#474747";><font color=white>View</font></b></footer>
+            </article></div></a>
+		</div>
+      </div>
+          <div class="group btmspace-50 demo">
+        <div class="one_half first"><div class="grow">
+		<a href="https://erc.mp.gov.in/Functions.aspx"><article style="border-radius: 15px;box-shadow: 0 0 80px black;background-color:#55e967e0;";><i></i>
+              <center><h1 class="heading" style="font-size: 17px;"><b><img src="./icons/legislation/white.png" alt="Smiley face" height="50" width="50" style="background-color:white;"></img><font color="black" size="6;">  Functions</b></font></h1></center>
+              <footer style="border-radius: 0px 0px 15px 15px;font-size: 16px; padding-left:10px;background-color:white;box-shadow: 0 0 1px black;font color="red";><b style="color:#474747";><font color=white>View</font></b></footer>
+            </article></div></a>
+		</div>
+        <div class="one_half"><div class="grow">
+		<a href="https://erc.mp.gov.in/PresentStatus.aspx"><article style="border-radius: 15px;box-shadow: 0 0 80px black;background-color:#55e967e0;";><i></i>
+              <center><h1 class="heading" style="font-size: 17px;"><b><img src="./icons/legislation/white.png" alt="Smiley face" height="50" width="50" style="background-color:white;"></img><font color="black" size="6;">  Present Status</b></font></h1></center>
+              <footer style="border-radius: 0px 0px 15px 15px;font-size: 16px; padding-left:10px;background-color:white;box-shadow: 0 0 1px black;font color="red";><b style="color:#474747";><font color=white>View</font></b></footer>
+            </article></div></a>
+		</div>
+      </div>
+	  <div class="group btmspace-50 demo">
+        <div class="one_half first"><div class="grow">
+		<a href="https://erc.mp.gov.in/PastSupport.aspx"><article style="border-radius: 15px;box-shadow: 0 0 80px black;background-color:#55e967e0;";><i></i>
+              <center><h1 class="heading" style="font-size: 17px;"><b><img src="./icons/legislation/white.png" alt="Smiley face" height="50" width="50" style="background-color:white;"></img><font color="black" size="6;">  Past Support</b></font></h1></center>
+              <footer style="border-radius: 0px 0px 15px 15px;font-size: 16px; padding-left:10px;background-color:white;box-shadow: 0 0 1px black;font color="red";><b style="color:#474747";><font color=white>View</font></b></footer>
+            </article></div></a>
+		</div>
+        <div class="one_half"><div class="grow">
+		<a href="https://erc.mp.gov.in/Documents/Chronology.pdf"><article style="border-radius: 15px;box-shadow: 0 0 80px black;background-color:#55e967e0;";><i></i>
+              <center><h1 class="heading" style="font-size: 17px;"><b><img src="./icons/legislation/white.png" alt="Smiley face" height="50" width="50" style="background-color:white;"></img><font color="black" size="6;">  Brief Chronology</b></font></h1></center>
+              <footer style="border-radius: 0px 0px 15px 15px;font-size: 16px; padding-left:10px;background-color:white;box-shadow: 0 0 1px black;font color="red";><b style="color:#474747";><font color=white>View</font></b></footer>
+            </article></div></a>
+		</div>
+      </div>
+	  <div class="group btmspace-50 demo">
+        <div class="one_half first"><div class="grow">
+		<a href="https://erc.mp.gov.in/Orders.aspx"><article style="border-radius: 15px;box-shadow: 0 0 80px black;background-color:#55e967e0;";><i></i>
+              <center><h1 class="heading" style="font-size: 17px;"><b><img src="./icons/legislation/white.png" alt="Smiley face" height="50" width="50" style="background-color:white;"></img><font color="black" size="6;">  Orders & Notifications</b></font></h1></center>
+              <footer style="border-radius: 0px 0px 15px 15px;font-size: 16px; padding-left:10px;background-color:white;box-shadow: 0 0 1px black;font color="red";><b style="color:#474747";><font color=white>View</font></b></footer>
+            </article></div></a>
+		</div>
+        <div class="one_half"><div class="grow">
+		<a href="https://erc.mp.gov.in/Documents/ERC_2012.pdf"><article style="border-radius: 15px;box-shadow: 0 0 80px black;background-color:#55e967e0;";><i></i>
+              <center><h1 class="heading" style="font-size: 17px;"><b><img src="./icons/legislation/white.png" alt="Smiley face" height="50" width="50" style="background-color:white;"></img><font color="black" size="6;">  ERC Brochure</b></font></h1></center>
+              <footer style="border-radius: 0px 0px 15px 15px;font-size: 16px; padding-left:10px;background-color:white;box-shadow: 0 0 1px black;font color="red";><b style="color:#474747";><font color=white>View</font></b></footer>
+            </article></div></a>
+		</div>
+      </div>
+	  <div class="group btmspace-50 demo">
+        <div class="one_half first"><div class="grow">
+		<a href="https://erc.mp.gov.in/Documents/Chlorine1.pdf"><article style="border-radius: 15px;box-shadow: 0 0 80px black;background-color:#55e967e0;";><i></i>
+              <center><h1 class="heading" style="font-size: 17px;"><b><img src="./icons/legislation/white.png" alt="Smiley face" height="50" width="50" style="background-color:white;"></img><font color="black" size="6;">  Last Emergency Tackled</b></font></h1></center>
+              <footer style="border-radius: 0px 0px 15px 15px;font-size: 16px; padding-left:10px;background-color:white;box-shadow: 0 0 1px black;font color="red";><b style="color:#474747";><font color=white>View</font></b></footer>
+            </article></div></a>
+		</div>
+      </div>
+      </div>
+    </div>
+	<div class="clear"></div>
+  </main>
+</div>
+    <!-- ################################################################################################ -->
 <!-- ## ##############-->
 <!-- #####################################google map########################################################### -->
 <!-- #####################################google map########################################################### -->
@@ -1482,6 +1585,11 @@ body::-webkit-scrollbar-thumb {
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.backtotop.js"></script>
 <script src="layout/scripts/jquery.mobilemenu.js"></script>
+<!-- load some of html -->
+<script>
+includeHTML();
+</script>
+<!-- load some of html -->
 </body>
 
 </html>
