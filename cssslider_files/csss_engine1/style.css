@@ -1129,6 +1129,6 @@ only screen and (                max-resolution: 2dppx)  and (max-width: 480px) 
 @media only screen and (max-width: 1366px) {
   .csslider1,
   .csslider1 > ul {
-    height: 350px;
+    max-height: 350px;
   }
 }
