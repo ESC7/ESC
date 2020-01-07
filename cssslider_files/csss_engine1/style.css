@@ -450,7 +450,7 @@
   margin-top: -28px;
   margin-left: -28px;
 
-  background-color: #101010;
+  background-color: #0000007d;
 
   border-radius: 50%;
 }
@@ -471,8 +471,7 @@
 }
 .csslider1 > .cs_arrowprev > label span,
 .csslider1 > .cs_arrownext > label span {
-  display: block;
-  color: #3A4A5A;
+  color: #ffffff;
 }
 .csslider1 > .cs_arrowprev > label span:after,
 .csslider1 > .cs_arrownext > label span:after {
@@ -582,7 +581,7 @@ _:-ms-input-placeholder, :root .csslider1 > .cs_arrownext > label span:after {
   margin-top: -28px;
   margin-left: -28px;
 
-  background-color: #101010;
+  background-color: #0000007d;
 
   border-radius: 50%;
 }
@@ -592,8 +591,7 @@ _:-ms-input-placeholder, :root .csslider1 > .cs_arrownext > label span:after {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 .csslider1 > .cs_play_pause > label span {
-  display: block;
-  color: #3A4A5A;
+  color: #ffffff;
 }
 .csslider1 > .cs_play_pause > label span:after{
   display: block;
@@ -797,7 +795,7 @@ _:-ms-input-placeholder, :root .csslider1 > .cs_play_pause > label span:after {
   transform: translateY(0);
 }
 .csslider1 > .cs_description > label > .cs_title {
-  background-color: #101010;
+  background-color: #214b4a;
   margin: -5px 10px;
   opacity: 0;
   visibility: hidden;
