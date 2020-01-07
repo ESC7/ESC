@@ -20,3 +20,6 @@ html {
 <!-- Scroll click -->
 <div class="main" id="contact_div1">
 <a href="contact_div1"></a></div>
+
+
+1300 450 in slider
